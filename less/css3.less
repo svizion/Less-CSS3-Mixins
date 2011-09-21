@@ -30,14 +30,9 @@
 	-moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
 }
 
-.text-shadow(@shadow_color:#fff, @inset:1px)
+.text-shadow(@shadow_color:#fff, @inset:1px, @blur:1px)
 {
-	text-shadow:@inset @inset 1px @shadow_color;
-}
-
-.text-shadow_inset(@shadow_color:#fff)
-{
-	text-shadow:-1px -1px 1px @shadow_color;
+	text-shadow:@inset @inset @blur @shadow_color;
 }
 
 .opacity(@op:100)
