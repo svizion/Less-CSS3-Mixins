@@ -1,0 +1,16 @@
+*{margin:0;padding:0;}
+.container{width:1140px;margin:0 auto;overflow:hidden;border:1px solid black;}
+.grid1,.grid2,.grid3,.grid4,.grid5,.grid6,.grid7,.grid8,.grid9,.grid10{margin-left:2.22222222%;float:left;min-height:1px;}
+.grid1{width:8%;}
+.grid2{width:18.22222222%;}
+.grid3{width:28.444444439999998%;}
+.grid4{width:38.66666666%;}
+.grid5{width:48.888888879999996%;}
+.grid6{width:59.1111111%;}
+.grid7{width:69.33333332%;}
+.grid8{width:79.55555554%;}
+.grid9{width:89.77777775999999%;}
+.grid10{width:99.99999998%;}
+.first{clear:left;margin-left:0;}
+img,video,audio,object{max-width:100%;}
+@media only screen and (max-width: 1139px){.container{width:960px;}}@media screen and (max-width: 960px){.container{width:99.99999998%;}}@media screen and (max-width: 479px){.grid1,.grid2,.grid3,.grid4,.grid5,.grid6,.grid7,.grid8,.grid9,.grid10{width:100%;margin-left:0;}}

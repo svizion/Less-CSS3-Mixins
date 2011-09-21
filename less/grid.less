@@ -1,0 +1,70 @@
+/*
+*
+* Create a CSS3 media-query flexible grid for use with LESS.
+* Created by Seth Meranda, http://twitter.com/smeranda
+*
+*/
+
+/* Define your column fixed column and gutter width for 978px wide (we'll scale up and down based on this). */
+
+@columnWidth: 8%;
+@gutter: 2.22222222%;
+
+/* LESS function to combine column and gutter widths */
+.theWidth (@theColumn: 1) {
+    width: (@columnWidth * @theColumn) + (@gutter * (@theColumn - 1));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10 {
+    margin-left: @gutter;
+    float: left;
+    min-height: 1px;
+}
+.grid1 { .theWidth(1); }
+.grid2 { .theWidth(2); }
+.grid3 { .theWidth(3); }
+.grid4 { .theWidth(4); }
+.grid5 { .theWidth(5); }
+.grid6 { .theWidth(6); }
+.grid7 { .theWidth(7); }
+.grid8 { .theWidth(8); }
+.grid9 { .theWidth(9); }
+.grid10 { .theWidth(10); }
+
+.first {
+    clear: left;
+    margin-left: 0;
+}
+/* Content areas */
+img, video, audio, object { max-width:100%; }
+
+/* Media Queries for smaller screens */
+
+@media only screen and (max-width: 1139px) {
+
+    .container {
+        width: 960px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .container {
+        .theWidth(10);
+    }
+}
+@media screen and (max-width: 479px) {
+    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
